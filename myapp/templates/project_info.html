@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Предметна область Кінотеатри</title>
+</head>
+<body>
+
+<h1>Предметна область Кінотеатри</h1>
+
+<p style="font-style: italic; color: blue;">Федяй Артем Ігорович КН20002-б</p>
+
+{% for table_name, table_data in tables_data.items %}
+    <h2>{{ table_name }}</h2>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr style="font-weight: bold;">
+            {% for header in table_data.0.keys %}
+                <td>{{ header }}</td>
+            {% endfor %}
+        </tr>
+        {% for row in table_data %}
+            <tr>
+                {% for value in row.values %}
+                    <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+{% endfor %}
+
+</body>
+</html>
