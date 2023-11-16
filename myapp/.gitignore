@@ -1,0 +1,17 @@
+# Virtual environment
+venv/
+
+# Compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+# Database file
+*.db
+
+# IDE specific folders
+.vscode/
+.idea/
+
+# Django migration files
+myproject/myapp/migrations/
